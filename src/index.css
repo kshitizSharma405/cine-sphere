@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes bounceOnce {
+  0% {
+    transform: translateY(0); /* Starting position */
+  }
+  50% {
+    transform: translateY(-20px); /* Bounce height */
+  }
+  100% {
+    transform: translateY(0); /* Return to original position */
+  }
+}
+
+.animate-bounce-once {
+  animation: bounceOnce 1s ease-out forwards; /* Apply the bounce effect */
+}
