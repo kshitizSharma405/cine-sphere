@@ -252,7 +252,7 @@ const ProfileScreen = () => {
       </div>
 
       {/* Split Fields Section */}
-      <div className="bg-white bg-opacity-90 rounded-3xl shadow-2xl mx-6 sm:mx-10 md:mx-36 p-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="bg-white bg-opacity-90 rounded-3xl shadow-2xl mx-6 mb-8 mt-4 sm:mx-10 md:mx-36 p-8 grid grid-cols-1 md:grid-cols-2 gap-6">
         {fields.map((field, index) => (
           <div
             key={index}
