@@ -12,6 +12,18 @@ const FormPage = () => {
     bio: "",
     profilePicture: null,
     coverPhoto: null,
+    favoriteMusic: "",
+    favoriteBook: "",
+    favoriteFood: "",
+    hobby: "",
+    dreamVacation: "",
+    favoriteSport: "",
+    petName: "",
+    favoriteSeason: "",
+    favoriteCity: "",
+    dreamJob: "",
+    favoriteColor: "",
+    lifeMotto: "",
   });
   const navigate = useNavigate();
   const genres = [
@@ -121,6 +133,18 @@ const FormPage = () => {
         bio: "",
         profilePicture: null,
         coverPhoto: null,
+        favoriteMusic: "",
+        favoriteBook: "",
+        favoriteFood: "",
+        hobby: "",
+        dreamVacation: "",
+        favoriteSport: "",
+        petName: "",
+        favoriteSeason: "",
+        favoriteCity: "",
+        dreamJob: "",
+        favoriteColor: "",
+        lifeMotto: "",
       });
     } else {
       alert("Data exceeds storage limit. Please optimize your inputs.");
@@ -137,7 +161,7 @@ const FormPage = () => {
       }}
     >
       <div
-        className="p-8 rounded-lg shadow-lg w-full max-w-2xl relative"
+        className="p-8 rounded-lg shadow-lg w-full max-w-7xl relative"
         style={{
           background: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8))", // Added gradient for form overlay
           backdropFilter: "blur(10px)", // Apply blur effect to background
@@ -149,7 +173,7 @@ const FormPage = () => {
         </h2>
         <form className="space-y-6" onSubmit={handleSubmit}>
           {/* Name and Email */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-6">
             <div>
               <label
                 htmlFor="name"
@@ -186,8 +210,8 @@ const FormPage = () => {
             </div>
           </div>
 
-          {/* Favorite Movie and Actor */}
-          <div className="grid grid-cols-2 gap-4">
+          {/* Favorite Movie, Actor and genre */}
+          <div className="grid grid-cols-3 gap-4">
             <div>
               <label
                 htmlFor="favoriteMovie"
@@ -221,10 +245,6 @@ const FormPage = () => {
                 value={formData.favoriteActor}
               />
             </div>
-          </div>
-
-          {/* Genre and Bio */}
-          <div className="grid grid-cols-2 gap-4">
             <div>
               <label
                 htmlFor="genre"
@@ -248,20 +268,213 @@ const FormPage = () => {
                 ))}
               </select>
             </div>
+          </div>
+
+          {/* Favorite color, Favorite Music and Book */}
+          <div className="grid grid-cols-3 gap-4">
             <div>
               <label
-                htmlFor="bio"
+                htmlFor="favoriteColor"
                 className="block text-white text-sm font-medium"
               >
-                Bio
+                Favorite Color
               </label>
-              <textarea
-                id="bio"
-                name="bio"
+              <input
+                type="text"
+                id="favoriteColor"
+                name="favoriteColor"
                 className="mt-1 p-3 w-full bg-gray-800 text-white rounded-lg shadow-md focus:ring-2 focus:ring-red-500 transition-all"
                 onChange={handleChange}
-                value={formData.bio}
-              ></textarea>
+                value={formData.favoriteColor}
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="favoriteMusic"
+                className="block text-white text-sm font-medium"
+              >
+                Favorite Music
+              </label>
+              <input
+                type="text"
+                id="favoriteMusic"
+                name="favoriteMusic"
+                className="mt-1 p-3 w-full bg-gray-800 text-white rounded-lg shadow-md focus:ring-2 focus:ring-red-500 transition-all"
+                onChange={handleChange}
+                value={formData.favoriteMusic}
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="favoriteBook"
+                className="block text-white text-sm font-medium"
+              >
+                Favorite Book
+              </label>
+              <input
+                type="text"
+                id="favoriteBook"
+                name="favoriteBook"
+                className="mt-1 p-3 w-full bg-gray-800 text-white rounded-lg shadow-md focus:ring-2 focus:ring-red-500 transition-all"
+                onChange={handleChange}
+                value={formData.favoriteBook}
+              />
+            </div>
+          </div>
+
+          {/* Favorite Food, Hobby and Dream vacation */}
+          <div className="grid grid-cols-3 gap-4">
+            <div>
+              <label
+                htmlFor="favoriteFood"
+                className="block text-white text-sm font-medium"
+              >
+                Favorite Food
+              </label>
+              <input
+                type="text"
+                id="favoriteFood"
+                name="favoriteFood"
+                className="mt-1 p-3 w-full bg-gray-800 text-white rounded-lg shadow-md focus:ring-2 focus:ring-red-500 transition-all"
+                onChange={handleChange}
+                value={formData.favoriteFood}
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="hobby"
+                className="block text-white text-sm font-medium"
+              >
+                Hobby
+              </label>
+              <input
+                type="text"
+                id="hobby"
+                name="hobby"
+                className="mt-1 p-3 w-full bg-gray-800 text-white rounded-lg shadow-md focus:ring-2 focus:ring-red-500 transition-all"
+                onChange={handleChange}
+                value={formData.hobby}
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="dreamVacation"
+                className="block text-white text-sm font-medium"
+              >
+                Dream Vacation
+              </label>
+              <input
+                type="text"
+                id="dreamVacation"
+                name="dreamVacation"
+                className="mt-1 p-3 w-full bg-gray-800 text-white rounded-lg shadow-md focus:ring-2 focus:ring-red-500 transition-all"
+                onChange={handleChange}
+                value={formData.dreamVacation}
+              />
+            </div>
+          </div>
+
+          {/* Favorite Sport, Pet Name and Favorite Season */}
+          <div className="grid grid-cols-3 gap-4">
+            <div>
+              <label
+                htmlFor="favoriteSport"
+                className="block text-white text-sm font-medium"
+              >
+                Favorite Sport
+              </label>
+              <input
+                type="text"
+                id="favoriteSport"
+                name="favoriteSport"
+                className="mt-1 p-3 w-full bg-gray-800 text-white rounded-lg shadow-md focus:ring-2 focus:ring-red-500 transition-all"
+                onChange={handleChange}
+                value={formData.favoriteSport}
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="petName"
+                className="block text-white text-sm font-medium"
+              >
+                Pet Name
+              </label>
+              <input
+                type="text"
+                id="petName"
+                name="petName"
+                className="mt-1 p-3 w-full bg-gray-800 text-white rounded-lg shadow-md focus:ring-2 focus:ring-red-500 transition-all"
+                onChange={handleChange}
+                value={formData.petName}
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="favoriteSeason"
+                className="block text-white text-sm font-medium"
+              >
+                Favorite Season
+              </label>
+              <input
+                type="text"
+                id="favoriteSeason"
+                name="favoriteSeason"
+                className="mt-1 p-3 w-full bg-gray-800 text-white rounded-lg shadow-md focus:ring-2 focus:ring-red-500 transition-all"
+                onChange={handleChange}
+                value={formData.favoriteSeason}
+              />
+            </div>
+          </div>
+
+          {/* Favorite City and Dream Job */}
+          <div className="grid grid-cols-3 gap-4">
+            <div>
+              <label
+                htmlFor="favoriteCity"
+                className="block text-white text-sm font-medium"
+              >
+                Favorite City
+              </label>
+              <input
+                type="text"
+                id="favoriteCity"
+                name="favoriteCity"
+                className="mt-1 p-3 w-full bg-gray-800 text-white rounded-lg shadow-md focus:ring-2 focus:ring-red-500 transition-all"
+                onChange={handleChange}
+                value={formData.favoriteCity}
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="dreamJob"
+                className="block text-white text-sm font-medium"
+              >
+                Dream Job
+              </label>
+              <input
+                type="text"
+                id="dreamJob"
+                name="dreamJob"
+                className="mt-1 p-3 w-full bg-gray-800 text-white rounded-lg shadow-md focus:ring-2 focus:ring-red-500 transition-all"
+                onChange={handleChange}
+                value={formData.dreamJob}
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="lifeMotto"
+                className="block text-white text-sm font-medium"
+              >
+                Life Motto
+              </label>
+              <input
+                type="text"
+                id="lifeMotto"
+                name="lifeMotto"
+                className="mt-1 p-3 w-full bg-gray-800 text-white rounded-lg shadow-md focus:ring-2 focus:ring-red-500 transition-all"
+                onChange={handleChange}
+                value={formData.lifeMotto}
+              />
             </div>
           </div>
 
@@ -297,6 +510,21 @@ const FormPage = () => {
                 onChange={handleChange}
               />
             </div>
+          </div>
+          <div className="flex flex-col align-middle">
+            <label
+              htmlFor="bio"
+              className="text-center p-2 text-white text-sm font-medium"
+            >
+              Bio
+            </label>
+            <textarea
+              id="bio"
+              name="bio"
+              className=" p-3 w-full bg-gray-800 text-white rounded-lg shadow-md focus:ring-2 focus:ring-red-500 transition-all"
+              onChange={handleChange}
+              value={formData.bio}
+            ></textarea>
           </div>
 
           <button

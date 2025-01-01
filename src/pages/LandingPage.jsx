@@ -47,7 +47,7 @@ const LandingPage = () => {
       }`}
     >
       <h1
-        className={`text-4xl font-bold mb-4 transition-all duration-2000 ${
+        className={`pb-10 text-5xl sm:text-4xl md:text-5xl font-bold mb-4 transition-all duration-2000 ${
           scaleUp ? "transform scale-150 opacity-0" : ""
         }`}
       >
@@ -56,7 +56,7 @@ const LandingPage = () => {
       {!isReturningUser && (
         <button
           onClick={handleStart}
-          className="absolute right-10 bottom-1/2 w-16 h-16 flex items-center justify-center rounded-full bg-yellow-500 text-black hover:bg-yellow-400"
+          className="absolute sm:right-10 sm:bottom-1/2 sm:w-16 sm:h-16 sm:flex sm:items-center sm:justify-center sm:rounded-full sm:bg-yellow-500 sm:text-black sm:hover:bg-black sm:hover:text-yellow-400"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

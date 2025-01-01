@@ -48,7 +48,7 @@ const Home = () => {
       observer.current.observe(loadingRef.current);
     }
     return () => observer.current.disconnect();
-  }, [loading]);
+  }, [loading, handleObserver]);
 
   const handleLike = (movieId) => {
     setMovieDetails((prevDetails) => {
