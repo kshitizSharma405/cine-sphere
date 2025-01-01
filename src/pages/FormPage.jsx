@@ -12,13 +12,11 @@ const FormPage = () => {
     bio: "",
     profilePicture: null,
     coverPhoto: null,
-    favoriteMusic: "",
-    favoriteBook: "",
-    favoriteFood: "",
+
     hobby: "",
-    dreamVacation: "",
+
     favoriteSport: "",
-    petName: "",
+
     favoriteSeason: "",
     favoriteCity: "",
     dreamJob: "",
@@ -133,13 +131,11 @@ const FormPage = () => {
         bio: "",
         profilePicture: null,
         coverPhoto: null,
-        favoriteMusic: "",
-        favoriteBook: "",
-        favoriteFood: "",
+
         hobby: "",
-        dreamVacation: "",
+
         favoriteSport: "",
-        petName: "",
+
         favoriteSeason: "",
         favoriteCity: "",
         dreamJob: "",
@@ -164,7 +160,7 @@ const FormPage = () => {
         className="p-8 rounded-lg shadow-lg w-full max-w-7xl relative"
         style={{
           background: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8))", // Added gradient for form overlay
-          backdropFilter: "blur(10px)", // Apply blur effect to background
+          backdropFilter: "blur(2px)", // Apply blur effect to background
           boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.5)", // Adding shadow for 3D effect
         }}
       >
@@ -317,7 +313,7 @@ const FormPage = () => {
                 name="favoriteBook"
                 className="mt-1 p-3 w-full bg-gray-800 text-white rounded-lg shadow-md focus:ring-2 focus:ring-red-500 transition-all"
                 onChange={handleChange}
-                value={formData.favoriteBook}
+                value={formData?.favoriteBook}
               />
             </div>
           </div>

@@ -29,7 +29,7 @@ const LandingPage = () => {
         } else {
           navigate("/form");
         }
-      }, 1500); // After 1.5s to let the scaling and fading happen
+      }, 500); // After 1.5s to let the scaling and fading happen
 
       return () => clearTimeout(navigateTimer);
     }
@@ -47,7 +47,7 @@ const LandingPage = () => {
       }`}
     >
       <h1
-        className={`pb-10 text-5xl sm:text-4xl md:text-5xl font-bold mb-4 transition-all duration-2000 ${
+        className={`pb-10 text-5xl sm:text-4xl md:text-5xl font-bold mb-4 transition-all duration-1000 ${
           scaleUp ? "transform scale-150 opacity-0" : ""
         }`}
       >
